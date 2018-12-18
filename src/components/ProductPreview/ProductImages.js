@@ -70,7 +70,7 @@ export default class ProductImages extends React.Component {
 
     return (
       <>
-        <ImageBox>
+        {/* <ImageBox>
           <Image
             fluid={currentImage.localFile.childImageSharp.fluid}
             alt={alt}
@@ -94,7 +94,7 @@ export default class ProductImages extends React.Component {
               </ImageLink>
             );
           })}
-        </PreviewWrapper>
+        </PreviewWrapper> */}
       </>
     );
   }

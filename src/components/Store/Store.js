@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'react-emotion';
-import { Link } from 'gatsby';
+// import { Link } from 'gatsby';
 // import CallOut from './CallOut';
 import ProductListings from './ProductListings';
 import { pullHeadline, breakpoints, link } from '../../utils/styles';
@@ -13,18 +13,18 @@ const Headline = styled('h1')`
   }
 `;
 
-const ProductDetailsLink = styled(Link)`
-  ${link};
-  text-decoration: none;
-`;
+// const ProductDetailsLink = styled(Link)`
+//   ${link};
+//   text-decoration: none;
+// `;
 
 export default () => (
   <>
     <Headline>Get Gatsby Swag!</Headline>
     {/* <CallOut /> */}
     <ProductListings />
-    <ProductDetailsLink to="/product-details">
+    {/* <ProductDetailsLink to="/product-details">
       Product Details & Size Chart
-    </ProductDetailsLink>
+    </ProductDetailsLink> */}
   </>
 );

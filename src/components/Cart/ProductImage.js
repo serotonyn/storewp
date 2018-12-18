@@ -19,34 +19,38 @@ const ProductImage = ({
   return <Image {...imageProps} />;
 };
 
-export default props => (
-  <StaticQuery
-    query={graphql`
-      {
-        allShopifyProduct {
-          edges {
-            node {
-              images {
-                id
-                localFile {
-                  childImageSharp {
-                    fluid {
-                      ...GatsbyImageSharpFluid_withWebp
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    `}
-    render={({ allShopifyProduct }) => {
-      const images = allShopifyProduct.edges
-        .map(({ node }) => node.images)
-        .reduce((acc, val) => acc.concat(val), []);
+export default () => {
+  <div>normalement image</div>;
+};
 
-      return <ProductImage shopifyImages={images} {...props} />;
-    }}
-  />
-);
+// export default props => (
+//   <StaticQuery
+//     query={graphql`
+//       {
+//         allShopifyProduct {
+//           edges {
+//             node {
+//               images {
+//                 id
+//                 localFile {
+//                   childImageSharp {
+//                     fluid {
+//                       ...GatsbyImageSharpFluid_withWebp
+//                     }
+//                   }
+//                 }
+//               }
+//             }
+//           }
+//         }
+//       }
+//     `}
+//     render={({ allShopifyProduct }) => {
+//       const images = allShopifyProduct.edges
+//         .map(({ node }) => node.images)
+//         .reduce((acc, val) => acc.concat(val), []);
+
+//       return <ProductImage shopifyImages={images} {...props} />;
+//     }}
+//   />
+// );
